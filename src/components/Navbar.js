@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
 import './Navbar.css';
 
 function Navbar() {
+    // const inputRef = useRef();
+    // let navBar = document.querySelector('.nav-bar-container');
+    // let navPos = navBar.inputRef.getBoundingClientRect().top;
+
+    // window.addEventListener('scroll', event => {
+    //     let scrollPos = window.scrollY;
+    //     if(scrollPos > navPos){
+    //         navBar.classList.add('sticky');
+    //     } 
+    //     else {
+    //         navBar.classList.remove('sticky');
+    //     }
+    // });
     return (
     <div className="nav-bar-container">
         <div className="nav-bar-left">

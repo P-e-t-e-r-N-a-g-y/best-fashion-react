@@ -1,0 +1,66 @@
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.img {
+    width: 100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    font-size: 4rem;
+    padding: 2rem;
+    color: white;
+
+}
+
+.prev {
+    left: 0%;
+}
+
+.next {
+    right: 0%;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev:hover {
+    border-radius: 0 15px 15px 0;
+}
+
+.next:hover {
+    border-radius:  15px 0 0 15px;
+}
+
+.dot-container {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+
+.dot {
+    display: inline-block;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
