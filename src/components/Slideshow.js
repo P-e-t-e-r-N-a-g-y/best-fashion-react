@@ -1,55 +1,44 @@
-import React from "react";
-import './Slideshow.css';
+import React, {useState} from "react";
+import "./Slideshow.css";
+import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 
 function Slideshow() {
-    let slideIndex = 1;
-    showSlides(slideIndex);
+     let [count, setCount]  = useState(0);
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        let slides = document.getElementsByClassName('img');
-        let dots = document.getElementsByClassName('dot');
-        let slideLength = 3;
-
-        if(n > slideLength) {
-            slideIndex = 1;
+    const plusSlides = () => {
+        if (count < images.length-1){
+            setCount(count + 1);
         }
-        if (n < 1) {
-            slideIndex = slideLength;
-        }
-
-        // for (let i = 0; i < slideLength; i++){
-        //     slides[i].style.display = 'none';
-        //     dots[i].className = dots[i].className.replace("active", "");
-        // }
-        
-        // slides[slideIndex-1].style.display = 'block';
-        // dots[slideIndex-1].className += ' active';
     }
+
+    const negativeSlides = () => {
+        if(count > 0){
+            setCount(count - 1);
+        }
+    }
+
+    const images = [
+        {url: "/cover1.jpg"},
+        {url: "/cover2.jpg"},
+        {url: "/cover3.jpg"}
+    ];
+
     return (
         <div className="img-container">
             <div className="img">
-                <img className="fade" src="/cover1.jpg" />
+                <img className="fade" src={images[count].url} />
             </div>
-            <div className="img">
-                <img className="fade" src="/cover2.jpg" />
+            <div className="prev" onClick={negativeSlides}>
+                <IoIosArrowBack />
             </div>
-            <div className="img">
-                <img className="fade" src="/cover3.jpg" />
+            <div className="next" onClick={plusSlides}>
+                <IoIosArrowForward />
             </div>
-            <a className="prev" onClick={plusSlides(-1)}>&#10094</a>
-            <a className="next" onClick={plusSlides(1)}>&#10095</a>
             <div className="dot-container">
-                <span className="dot dot1" onClick={currentSlide(1)}></span>
-                <span className="dot dot2" onClick={currentSlide(2)}></span>
-                <span className="dot dot3" onClick={currentSlide(3)}></span>
+                <span className="dot dot1"></span>
+                <span className="dot dot2"></span>
+                <span className="dot dot3"></span>
             </div>
         </div>
     );

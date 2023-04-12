@@ -1,4 +1,5 @@
 .nav-bar-container {
+    position: fixed;
     display: flex;
     background-color: black;
     width: 100%;

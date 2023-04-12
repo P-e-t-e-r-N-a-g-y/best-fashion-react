@@ -1,8 +1,10 @@
 .img-container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    z-index: 0;
 }
 
 .img {
@@ -12,9 +14,10 @@
 .prev, .next {
     cursor: pointer;
     position: absolute;
+    vertical-align: middle;
     top: 40%;
     font-size: 4rem;
-    padding: 2rem;
+    padding: 1rem;
     color: white;
 
 }
