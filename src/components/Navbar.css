@@ -33,12 +33,12 @@
     color: white;
 }
 
-.nav-bar-element-left {
+.nav-bar-element-left a{
     text-decoration: none;
     color: rgb(220, 220, 220);
 }
 
-.nav-bar-element-left:hover{
+.nav-bar-element-left a:hover{
     color: white;
     cursor: pointer;
 }
@@ -64,6 +64,11 @@
     padding: 0.5rem;
 }
 
+.nav-bar-element-right a {
+    text-decoration: none;
+    color: rgb(220, 220, 220);
+}
+
 .nav-bar-element-search {
     display: flex;
     flex-direction: column;
@@ -71,12 +76,13 @@
     justify-content: center;
 }
 
-.nav-bar-element {
+.nav-bar-element a {
     text-decoration: none;
     color: rgb(220, 220, 220);
 }
 
-.nav-bar-element:hover{
+.nav-bar-element a:hover{
+    text-decoration: underline;
     color: white;
     cursor: pointer;
 }

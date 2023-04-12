@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 
 function Favourite(){
-    return <Navbar/>;
+    return ;
 }
 
 export default Favourite;
