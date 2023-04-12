@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    z-index: 0;
 }
 
 .img {
@@ -12,14 +11,12 @@
 }
 
 .prev, .next {
-    cursor: pointer;
     position: absolute;
-    vertical-align: middle;
-    top: 40%;
+    display: flex;
+    top: 45%;
     font-size: 4rem;
     padding: 1rem;
     color: white;
-
 }
 
 .prev {
@@ -31,10 +28,12 @@
 }
 
 .prev:hover, .next:hover {
+    cursor: pointer;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
 .prev:hover {
+    cursor: pointer;
     border-radius: 0 15px 15px 0;
 }
 
