@@ -1,0 +1,77 @@
+.flex-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #dfdfdf;
+    padding: 2rem;
+    height: 100%;
+    width: 100%;
+}
+
+.flex-element-img {
+    height: 360px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.flex-element-top {
+    margin: auto 0;
+}
+
+.flex-element-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 90%;
+    margin: 0 auto;
+}
+.flex-element {
+    height: 3rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.add-basket {
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 0.1rem;
+    width: 100px;
+}
+
+.add-basket:hover {
+    transform: scale(1.1);
+}
+
+.add-basket:active {
+    transform: scale(1);
+}
+
+.add-basket-img {
+    height: 100%;
+    color: white;
+}
+
+.add-favourite {
+    cursor: pointer;
+    background-color: none;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    width: 15%;
+}
+
+.add-favourite:hover {
+    transform: scale(1.1);
+}
+
+.add-favourite:active {
+    transform: scale(1);
+}
